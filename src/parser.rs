@@ -68,7 +68,7 @@ impl Parser {
         match expr {
             Symbol(sym) => match sym.as_str() {
                 "#f" | "#F" => Ok(Bool(false)),
-                "#t" | "#T" => Ok(Bool(false)),
+                "#t" | "#T" => Ok(Bool(true)),
                 _ => Ok(Symbol(sym.clone())),
             },
             List(list) => match list.as_slice() {
